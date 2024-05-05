@@ -1,0 +1,51 @@
+
+<div *ngIf="loading" class="row d-flex justify-content-center align-items-center">
+    <div class="col-12 text-center">
+        <p-progressSpinner></p-progressSpinner>
+    </div>
+</div>
+
+<header *ngIf="!loading" class="main-header">
+    <div class="main-cont">
+        <div class="desc-header">
+            <img [src]="logo" alt="logo">
+            <h1 style="color: #0b95d6">IDECO</h1>
+        </div>
+        <div class="cont-header">
+            <h1>Bienvenid&#64;</h1>
+
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Familia Ideco</a>
+                </li>
+            </ul>
+            
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <form [formGroup]="loginForm" action="" id="form-admin">
+                    <p class="text-danger">{{loginError}}</p>
+                    <label for="usuario-admin">Usuario</label>
+                    <input type="text" name="useremail" formControlName="useremail" id="useremail" placeholder="correo electrónico">
+                    <div *ngIf="useremail?.invalid && (useremail?.dirty || useremail?.touched)" class="text-danger">
+                        <div *ngIf="useremail?.errors?.['required']">Digite su correo electrónico</div>
+                        <div *ngIf="useremail?.errors?.['email']">El email debe tener un formato válido.</div>
+                    </div>
+
+                    <label for="password-admin">Contraseña</label>
+                    <input type="password" name="pass" id="pass" placeholder="Contraseña" formControlName="userpassword">
+                    <div *ngIf="userpassword?.invalid && (userpassword?.dirty || userpassword?.touched)" class="text-danger">
+                        <div *ngIf="userpassword?.errors?.['required']">Digite su contraseña</div>
+                    </div>
+                    
+                    <br>
+                    
+                    <br>
+                    <button id="loginUsuario" type="button" (click)="login()">INICIAR SESION</button>
+                    <a href="#" id="forgot-userpassword">¿Olvidaste tu contraseña?</a>
+                    <a routerLink="/admin" id="register-link">¿No tienes cuenta? Regístrate</a>
+                    <div id="admin-loader" class="loader" style="display:none;"></div>
+                    <div id="admin-message"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>

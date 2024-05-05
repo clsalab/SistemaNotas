@@ -1,0 +1,105 @@
+H1 {
+    color: #0893d4;
+}
+H2 {
+    color: #0cb02b;
+}
+/* Estilos generales */
+.main-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.desc-header {
+    flex: 1;
+    text-align: center;
+}
+
+.cont-header {
+    flex: 1;
+    padding: 20px;
+}
+
+.desc-header img {
+    max-width: 100%;
+}
+
+.cont-header h1 {
+    color: #0cb02b;
+}
+
+.cont-header form {
+    width: 300px;
+    margin: 2em auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.cont-header form label {
+    display: block;
+    padding: 10px;
+}
+
+.cont-header input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.cont-header input:focus {
+    outline: none;
+    border-color: #0cb02b;
+}
+
+.cont-header button {
+    display: block;
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background-color: #0cb02b;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cont-header button:hover {
+    background-color: #074913;
+}
+
+/* Estilos específicos para el formulario de administrador */
+#form-admin {
+    background-color: #f2f2f2;
+}
+
+/* Estilos específicos para el formulario de profesor */
+#form-profesor {
+    background-color: #e6f7ff;
+}
+
+/* Estilos específicos para el formulario de profesor */
+#form-estudiante {
+    background-color: #71f7b8;
+}
+
+/* Indicador visual de carga */
+.loader {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #0cb02b;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
