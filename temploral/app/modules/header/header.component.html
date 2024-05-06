@@ -1,5 +1,4 @@
 
-    
 <!-- Loading -Cargador % True -->
 <div *ngIf="loading" class="row d-flex justify-content-center align-items-center">
     <div class="col-12 text-center">
@@ -12,7 +11,7 @@
 <h1 *ngIf="userLoginOn" ></h1>
 
 
-    <header class="app-header"><a class="app-header__logo" href="#">Sistema de Notas</a>
+   <header *ngIf="!loading" class="app-header"><a class="app-header__logo" href="#">Sistema de Notas</a>
         <!-- Sidebar toggle button--><a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a>
         <!-- Navbar Right Menu-->
         <ul class="app-nav">

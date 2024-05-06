@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'admin', component: AdminComponent},
   { path: 'student', component: StudentComponent},
   { path: 'teacher', component: TeacherComponent},
-  { path: 'sede', component: AdminDetailComponent},
+  { path: 'menu', component: AdminDetailComponent},
   {path: '**',redirectTo:'/login', pathMatch:'full'},
 ];
 

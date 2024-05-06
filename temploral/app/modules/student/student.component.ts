@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-teacher',
-  templateUrl: './teacher.component.html',
-  styleUrl: './teacher.component.css'
+  selector: 'app-student',
+  templateUrl: './student.component.html',
+  styleUrl: './student.component.css'
 })
-export class TeacherComponent implements OnInit {
+export class StudentComponent implements OnInit {
   loading:Boolean=false;
   userLoginOn:boolean=false;
 

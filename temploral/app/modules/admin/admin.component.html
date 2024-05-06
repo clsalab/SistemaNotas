@@ -1,10 +1,12 @@
+
+<!-- Loading -Cargador % True -->
 <div *ngIf="loading" class="row d-flex justify-content-center align-items-center">
     <div class="col-12 text-center">
         <p-progressSpinner></p-progressSpinner>
     </div>
 </div>
 <app-header></app-header>
-<main class="app-content">
+<main *ngIf="!loading" class="app-content">
         <div class="app-title">
         <div>
             <h1><i class="bi bi-speedometer"></i> Blank Page</h1>

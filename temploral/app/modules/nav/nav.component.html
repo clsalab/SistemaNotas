@@ -24,7 +24,7 @@
         <!-- ITEM ESTUDIANTE-->
         <li *ngIf="userLoginOn" class="treeview"><a class="app-menu__item" routerLink="/student" data-toggle="treeview"><i class="app-menu__icon bi bi-laptop"></i><span class="app-menu__label"><i class="fa-solid fa-user-graduate"> </i> Estudiantes</span><i class="treeview-indicator bi bi-chevron-right"></i></a>        
         <!-- ITEM SEDE-->
-        <li *ngIf="userLoginOn" class="treeview"><a class="app-menu__item" routerLink="/sede" data-toggle="treeview"><i class="app-menu__icon bi bi-table"></i><span class="app-menu__label" routerLink="/student"><i class="fa-solid fa-school"> </i> Sedes</span><i class="treeview-indicator bi bi-chevron-right"></i></a>
+        <li *ngIf="userLoginOn" class="treeview"><a class="app-menu__item" routerLink="/menu" data-toggle="treeview"><i class="app-menu__icon bi bi-table"></i><span class="app-menu__label" routerLink="/student"><i class="fa-solid fa-school"> </i> Sedes</span><i class="treeview-indicator bi bi-chevron-right"></i></a>
         </li>
         <!-- ITEM OFERTAS-->
         <li *ngIf="!userLoginOn" class="treeview"><a class="app-menu__item" routerLink="/teacher" data-toggle="treeview"><i class="app-menu__icon bi bi-table"></i><span class="app-menu__label" routerLink="/student"><i class="fa-solid fa-clipboard"> </i> Ofertas</span><i class="treeview-indicator bi bi-chevron-right"></i></a>
@@ -33,7 +33,7 @@
         <li *ngIf="!userLoginOn" class="treeview"><a class="app-menu__item" routerLink="/student" data-toggle="treeview"><i class="app-menu__icon bi bi-table"></i><span class="app-menu__label" routerLink="/student"> <i class="fa-solid fa-bullhorn"> </i> Noticias</span><i class="treeview-indicator bi bi-chevron-right"></i></a>
         </li>
         <!-- ITEM CONTACTO-->
-        <li *ngIf="!userLoginOn" class="treeview"><a class="app-menu__item" routerLink="/sede" data-toggle="treeview"><i class="app-menu__icon bi bi-table"></i><span class="app-menu__label" routerLink="/student"> <i class="fa-solid fa-address-book "> </i> Contactos</span><i class="treeview-indicator bi bi-chevron-right"></i></a>
+        <li *ngIf="!userLoginOn" class="treeview"><a class="app-menu__item" routerLink="/menu" data-toggle="treeview"><i class="app-menu__icon bi bi-table"></i><span class="app-menu__label" routerLink="/student"> <i class="fa-solid fa-address-book "> </i> Contactos</span><i class="treeview-indicator bi bi-chevron-right"></i></a>
         </li>
         <!-- ITEM SALIR lOGOUT-->
         <li><a class="app-menu__item no-underline" href="#"><i class="app-menu__icon bi bi-code-square"></i><span class="app-menu__label" (click)="logout()"><i class="fa-solid fa-right-from-bracket">  </i>  Logout</span></a></li>

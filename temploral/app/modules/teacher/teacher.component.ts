@@ -5,14 +5,15 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './teacher.component.html',
   styleUrl: './teacher.component.css'
 })
-export class TeacherComponent implements OnInit {
-  loading:Boolean=false;
+export class TeacherComponent implements OnInit{
+  loading:Boolean = false;
   userLoginOn:boolean=false;
+  
+  constructor () {}
 
-  constructor(){}
 
   ngOnInit(): void {
     this.loading = false;
-  
-}
+  }
+
 }
