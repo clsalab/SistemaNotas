@@ -7,6 +7,7 @@
 /bazel-out
 /temporal
 
+
 # Node
 /node_modules
 npm-debug.log
