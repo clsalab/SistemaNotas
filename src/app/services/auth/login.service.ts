@@ -3,7 +3,6 @@ import { BehaviorSubject, Observable, catchError, map, of, tap, throwError } fro
 import { LoginRequest } from '../../interfaces/loginRequest';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { User } from '../../interfaces/user';
-import { response } from 'express';
 
 @Injectable({
   providedIn: 'root'
@@ -125,5 +124,14 @@ export class LoginService {
     console.error('Detalles del error:', error);
   
     return throwError(() => new Error('Algo falló. Por favor intente nuevamente.'));
+  }
+  getUserRoles (){}
+
+  hasRequiredRoles(){}
+
+  isLoggedIn(): boolean {
+    // Lógica para determinar si el usuario está autenticado
+    // Devuelve true si el usuario está autenticado, false de lo contrario
+    return true; // O false dependiendo de tu lógica de autenticación
   }
 }

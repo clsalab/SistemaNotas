@@ -2,14 +2,14 @@
 
 import { Injectable } from '@angular/core';
 import { CanActivate, Router, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
-import { AuthService } from '../sercices/auth.Service';
+import { LoginService } from '../services/auth/login.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RoleGuard implements CanActivate {
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private authService: LoginService, private router: Router) {}
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
     const expectedRoles = route.data['expectedRoles']; // Acceder a expectedRoles utilizando corchetes
@@ -23,7 +23,7 @@ export class RoleGuard implements CanActivate {
       // Redirigir a una ruta adecuada si el usuario no tiene los roles necesarios
       this.router.navigate(['/login']);
       return false;
-    }
-  }
+    } 
+  } 
 }
 
