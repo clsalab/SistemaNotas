@@ -40,7 +40,7 @@ H2 {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
+    background-color: #faf7f7;
 }
 
 .cont-header form label {
@@ -81,17 +81,11 @@ H2 {
 
 /* Estilos específicos para el formulario de administrador */
 #form-admin {
-    background-color: #f2f2f2;
-}
-
-/* Estilos específicos para el formulario de profesor */
-#form-profesor {
     background-color: #e6f7ff;
 }
 
-/* Estilos específicos para el formulario de profesor */
-#form-estudiante {
-    background-color: #71f7b8;
+span{
+    font-size: 9pt;
 }
 
 /* Indicador visual de carga */

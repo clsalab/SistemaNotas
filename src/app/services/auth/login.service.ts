@@ -3,12 +3,13 @@ import { BehaviorSubject, Observable, catchError, map, of, tap, throwError } fro
 import { LoginRequest } from '../../interfaces/loginRequest';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { User } from '../../interfaces/user';
+import { ConstantUri } from '../../class/constantUri';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
-  private apiUrl = 'http://localhost:3002';
+  private apiUrl = ConstantUri.baseUrl;
   public currentUserLoginOn: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   public currentUserData: BehaviorSubject<User | null> = new BehaviorSubject<User | null>(null);
 
@@ -25,7 +26,7 @@ export class LoginService {
   }
 
   login(credentials: LoginRequest): Observable<User> {
-    const loginUrl = `${this.apiUrl}/auth/login`;
+    const loginUrl = ConstantUri.loginUserUrl;
 
     return this.http.post<{ token: string, user: User }>(loginUrl, credentials).pipe(
       tap((response: any) => {

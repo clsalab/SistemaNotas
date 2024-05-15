@@ -27,15 +27,15 @@
                     <label for="useremail">Usuario</label>
                     <input type="text" name="useremail" formControlName="useremail" id="useremail" placeholder="correo electrónico">
                     <div *ngIf="useremail?.invalid && (useremail?.dirty || useremail?.touched)" class="text-danger">
-                        <div *ngIf="useremail?.errors?.['required']">Digite su correo electrónico</div>
-                        <div *ngIf="useremail?.errors?.['email']">El email debe tener un formato válido.</div>
+                        <div *ngIf="useremail?.errors?.['required']"><span>Digite su correo electrónico</span></div>
+                        <div *ngIf="useremail?.errors?.['email']"><span>El email debe tener un formato válido.</span></div>
                     </div>
 
                     <label for="userpassword">Contraseña</label>
                     <input type="password" name="pass" id="pass" placeholder="Contraseña" formControlName="userpassword">
                     <div *ngIf="userpassword?.invalid && (userpassword?.dirty || userpassword?.touched)" class="text-danger">
                         <div *ngIf="userpassword?.errors?.['required']"><span>Digite su contraseña</span></div>
-                        <div *ngIf="userpassword?.errors?.['pattern']">La contraseña no cumple min</div>
+                        <div *ngIf="userpassword?.errors?.['pattern']"><span>La contraseña no cumple. Minimo 8 caracteres</span></div>
                     </div>
                     
                     <br>

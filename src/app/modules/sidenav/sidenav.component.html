@@ -1,0 +1,46 @@
+
+<!-- Loading -Cargador % True -->
+<div *ngIf="loading" class="row d-flex justify-content-center align-items-center">
+    <div class="col-12 text-center">
+        <p-progressSpinner></p-progressSpinner>
+    </div>
+</div>
+
+<h1 *ngIf="!loading">Modulo SideNav</h1>
+<h1 *ngIf="!userLoginOn" ><div class="sidenav2">
+    <div class="logo-container">
+        <button class="logo">A</button>
+        <div class="logo-text" >Angular</div>
+        <button class="btn-close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <ul class="sidenav-nav">
+        <li class="sidenav-nav-item">
+            <a class="sidenav-nav-link" routerLink="teacher"> 
+                <div class="sidenav-link-icon"><i class="fa-thin fa-briefcase"></i></div>
+                <span class="sidenav-link-text">Profesor</span>
+            </a>
+        </li>
+    </ul>
+</div></h1>
+<h1 *ngIf="userLoginOn" >Usuario autenticado</h1>
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed':'' ">
+    <div class="logo-container">
+        <button class="logo">A</button>
+        <div class="logo-text" *ngIf="collapsed">Angular</div>
+        <button class="btn-close" *ngIf="collapsed"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <ul class="sidenav-nav">
+        <li class="sidenav-nav-item" *ngFor="let data of navData">
+            <a class="sidenav-nav-link" [routerLink]="[data.routerLink]"> 
+                <i class="sidenav-link-icon" [class]="data.icon"></i>
+                <span class="sidenav-link-text" *ngIf="collapsed">{{data.label}}</span>
+            </a>
+            <li class="sidenav-nav-item">
+                <a class="sidenav-nav-link" routerLink="teacher"> 
+                    <div class="sidenav-link-icon"><i class="fa-thin fa-briefcase"></i></div>
+                    <span class="sidenav-link-text">Profesor</span>
+                </a>
+        </li>
+    </ul>
+</div>
+

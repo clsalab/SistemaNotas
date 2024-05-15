@@ -5,6 +5,7 @@ import { AdminComponent } from './modules/admin/admin.component';
 import { StudentComponent } from './modules/student/student.component';
 import { AdminDetailComponent } from './modules/admin/admin-detail/admin-detail.component';
 import { TeacherComponent } from './modules/teacher/teacher.component';
+import { SidenavComponent } from './modules/sidenav/sidenav.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent},
@@ -12,6 +13,8 @@ const routes: Routes = [
   { path: 'student', component: StudentComponent},
   { path: 'teacher', component: TeacherComponent},
   { path: 'sede', component: AdminDetailComponent},
+  { path: 'menu', component: SidenavComponent},
+
   {path: '**',redirectTo:'/login', pathMatch:'full'},
 ];
 

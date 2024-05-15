@@ -1,0 +1,41 @@
+footer {
+    background-color: #0cb02b;
+    color: white;
+    padding: 10px 0;
+    margin-top: 768px;
+    margin-bottom: 0px;
+}
+
+.jumbotron {
+    background-color: #0cb02b;
+    color: #ffffff;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.contenedor-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+.titulo-final {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons :in-range {
+    font-size: 20px;
+    color: #ffffff;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-icons i:hover {
+    color: #55acee;
+}

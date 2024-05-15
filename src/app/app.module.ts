@@ -17,6 +17,9 @@ import { HeaderComponent } from './modules/header/header.component';
 import { FooterComponent } from './modules/footer/footer.component';
 import { NavComponent } from './modules/nav/nav.component';
 import { JwtModule } from '@auth0/angular-jwt';
+import { BodyComponent } from './modules/body/body.component';
+import { SidenavComponent } from './modules/sidenav/sidenav.component';
+import { SettingsComponent } from './modules/settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +33,9 @@ import { JwtModule } from '@auth0/angular-jwt';
     HeaderComponent,
     FooterComponent,
     NavComponent,
+    BodyComponent,
+    SidenavComponent,
+    SettingsComponent,
   ],
   imports: [
     BrowserModule,
